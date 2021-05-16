@@ -1,12 +1,13 @@
 /** \File Tutorial4Part2.cpp
     \Brief Matrix manipulation program, Part of Lab 4 Part 2 COMP-118
-    \Details Program which we can
+    \Details Program which can...
     \Author Phoebe Zizirou
     \Version 0.1
     \Date 15/05/2021
     \Copyright UNIC*/
 
 #include<iostream>
+#include "Matrix.h"
 
 using namespace std;
 
@@ -22,6 +23,10 @@ int menu();
 
 int main()
 {
+    const int MAX_ROW = 10;
+    double matrix[MAX_ROW][MAX_COL] = { 1,2,3,4,5,6,7 }; 
+    int choice;
+
     int choice;
 
     do
@@ -45,20 +50,20 @@ int main()
 
         else if (choice == 4)   //Print Matrix
         {
-
+            printMatrix(matrix, -1);    //MAX_ROW
         }
 
-        else if (choice == 5)   //Option 1
+        else if (choice == 5)   //Is Identity Matrix
         {
 
         }
 
-        else if (choice == 6)   //Option 2
+        else if (choice == 6)   //Make Identity Matrix
         {
 
         }
 
-        else if (choice == 7)   //Option 3
+        else if (choice == 7)   //Sum of Diagonal
         {
 
         }
@@ -94,9 +99,9 @@ int main()
         cout << "2. Sum of Column" << endl;
         cout << "3. Fill random" << endl;
         cout << "4. Print Matrix" << endl;
-        cout << "5. Option 1" << endl;
-        cout << "6. Option 2" << endl;
-        cout << "7. Option 3" << endl;
+        cout << "5. Check if Identity Matrix" << endl;
+        cout << "6. Make Identity Matrix " << endl;
+        cout << "7. Sum og Diagonal" << endl;
         cout << "8. Exit" << endl;
      
         cout << endl;
