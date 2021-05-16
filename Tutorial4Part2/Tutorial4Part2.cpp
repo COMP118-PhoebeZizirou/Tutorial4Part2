@@ -35,17 +35,27 @@ int main()
 
         if (choice == 1)    //Sum of Row
         {
+            int row;
+            cout << "\nEnter the row you want to sum: ";
+            cin >> row;
 
+            cout << "\nSum of row is: " << sumOfRow(matrix, row, MAX_ROW);
         }
 
         else if (choice == 2)   //Sum of Column
         {
+            sums = sumOfRows(matrix, MAX_ROW);
 
+            for (int i = 0; i < MAX_ROW; ++i)
+                cout << "\nSum of row " << i << ": " << sums[i];
+
+            delete[] sums;
         }
 
         else if (choice == 3)   //Fill Random
         {
 
+            fillWithRandomNum(matrix, MAX_ROW);
         }
 
         else if (choice == 4)   //Print Matrix
@@ -55,17 +65,21 @@ int main()
 
         else if (choice == 5)   //Is Identity Matrix
         {
-
+            if (isIdentityMatrix(matrix, MAX_ROW))
+                cout << "\nMatrix is an identity matrix";
+            else
+                cout << "\nMatrix is NOT an identity matrix";
         }
 
         else if (choice == 6)   //Make Identity Matrix
         {
-
+            if (!makeIdentityMatrix(matrix, MAX_ROW))
+                cerr << "\nNot a square matrix, cannot apply function";
         }
 
         else if (choice == 7)   //Sum of Diagonal
         {
-
+            cout << "\nSum of diagonal is: " << sumOfDiagonal(matrix, MAX_ROW);
         }
 
         else if (choice == 8)   //Exit

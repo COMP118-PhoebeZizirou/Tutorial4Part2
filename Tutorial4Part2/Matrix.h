@@ -9,7 +9,12 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-const int MAX_COL = 10;
+#pragma once
+
+    // Global constant
+const int MAX_COL = 5;
+const int RANDOM_MIN = 0;
+const int RANDOM_MAX = 50;
 
 double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow);
 double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow);

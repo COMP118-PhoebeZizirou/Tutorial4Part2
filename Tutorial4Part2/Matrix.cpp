@@ -1,36 +1,21 @@
 /** \File Matrix.cpp
-    \Brief Implementation File for a Matrix Library
-    \Details Library which can...
-    \Author Phoebe Zizirou
-    \Version 0.1
-    \Date 15/05/2021
-    \Copyright UNIC*/
+ *  \Brief Implementation File for a Matrix Library
+ *  \Details Library which can...
+ *  \Author Phoebe Zizirou
+ *  \Version 0.1
+ *  \Date 15/05/2021
+ *  \pre       First initialize the system.
+ *  \bug       Logical bugs in the following functions:
+ *             1) isIdentityMatrix
+ *             2) makeIdentityMatrix
+ *             3) sumOfDiagonal
+ *  \Copyright UNIC*/
 
 #include "Matrix.h"
 #include <iostream>
 #include <cassert>
 
 using namespace std;
-
-//Add Doxygen Comment
-double* sumOfRows(const double mat[][MAX_COL], const int maxRow)
-{
-    double sums[MAX_COL] = { 0 };   //maxRow];
-
-    for (int i = 0; i < maxRow; ++i)
-    {
-        sums[i] = 0;
-
-        for (int j = 0; j < MAX_COL; ++j)
-        {
-            sums[i] += mat[i][j];
-        }
-    }
-
-    return sums;
-}
-
-double* sumOfCols(const double mat[][MAX_COL], const int maxRow);
 
 /**
  * The <code>isIdentityMatrix</code> function checks if the matrix is an
