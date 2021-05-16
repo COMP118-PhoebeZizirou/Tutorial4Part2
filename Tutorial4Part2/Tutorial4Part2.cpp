@@ -26,8 +26,8 @@ int main()
     const int MAX_ROW = 10;
     double matrix[MAX_ROW][MAX_COL] = { 1,2,3,4,5,6,7 }; 
     int choice;
-
-    int choice;
+    int row;
+    double* sums;
 
     do
     {

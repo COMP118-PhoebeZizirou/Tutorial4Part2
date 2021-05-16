@@ -12,6 +12,26 @@
 
 using namespace std;
 
+//Add Doxygen Comment
+double* sumOfRows(const double mat[][MAX_COL], const int maxRow)
+{
+    double sums[MAX_COL] = { 0 };   //maxRow];
+
+    for (int i = 0; i < maxRow; ++i)
+    {
+        sums[i] = 0;
+
+        for (int j = 0; j < MAX_COL; ++j)
+        {
+            sums[i] += mat[i][j];
+        }
+    }
+
+    return sums;
+}
+
+double* sumOfCols(const double mat[][MAX_COL], const int maxRow);
+
 /**
  * The <code>isIdentityMatrix</code> function checks if the matrix is an
  * identity matrix.
